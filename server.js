@@ -4,7 +4,7 @@ const bodyparser = require("body-parser");
 const mongoose = require('mongoose');
 const passport = require("passport");
 const session = require("express-session");
-const flash = require("connect-flash");
+
 
 const notesController = require("./controller/notes.controller");
 const authController = require("./controller/auth.controller");
@@ -35,7 +35,6 @@ app.use(express.static("./public"))
 app.set("views","./views");
 app.set("view engine","ejs");
 
-app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
